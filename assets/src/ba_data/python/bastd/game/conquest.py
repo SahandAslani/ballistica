@@ -263,7 +263,7 @@ class ConquestGame(ba.TeamGameActivity[Player, Team]):
             flag.team = player.team
             flag.light.color = player.team.color
             flag.node.color = player.team.color
-            self.stats.player_scored(player, 10, screenmessage=False)
+            self.stats.player_scored(player, 10, color=player.team.color, screenmessage=False)
             ba.playsound(self._swipsound)
             self._flash_flag(flag)
             self._update_scores()
